@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cellBreak" id="093-tt-sFa" customClass="SimpsonCollectionViewCell" customModule="SimpsonsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="283" height="271"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="283" height="271"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qnj-dD-jWS">
+                        <rect key="frame" x="10" y="10" width="263" height="251"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdj-01-l98">
+                        <rect key="frame" x="0.0" y="0.0" width="283" height="271"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="qnj-dD-jWS" firstAttribute="leading" secondItem="093-tt-sFa" secondAttribute="leading" constant="10" id="Fhf-Mr-VaZ"/>
+                <constraint firstAttribute="trailing" secondItem="qnj-dD-jWS" secondAttribute="trailing" constant="10" id="JYK-4K-20h"/>
+                <constraint firstAttribute="bottom" secondItem="Mdj-01-l98" secondAttribute="bottom" id="OIr-Fj-8FB"/>
+                <constraint firstAttribute="bottom" secondItem="qnj-dD-jWS" secondAttribute="bottom" constant="10" id="dgz-wA-GOK"/>
+                <constraint firstItem="Mdj-01-l98" firstAttribute="leading" secondItem="093-tt-sFa" secondAttribute="leading" id="fcb-PP-1zg"/>
+                <constraint firstItem="qnj-dD-jWS" firstAttribute="top" secondItem="093-tt-sFa" secondAttribute="top" constant="10" id="fyH-It-Vpa"/>
+                <constraint firstItem="Mdj-01-l98" firstAttribute="top" secondItem="093-tt-sFa" secondAttribute="top" id="h4V-Uu-Wf6"/>
+                <constraint firstAttribute="trailing" secondItem="Mdj-01-l98" secondAttribute="trailing" id="xRu-wS-aHo"/>
+            </constraints>
+            <size key="customSize" width="283" height="271"/>
+            <connections>
+                <outlet property="imageView" destination="qnj-dD-jWS" id="tca-gt-wtv"/>
+                <outlet property="nameLabel" destination="Mdj-01-l98" id="f9g-eP-kdo"/>
+            </connections>
+            <point key="canvasLocation" x="103.5" y="-128.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

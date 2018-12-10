@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B15DA3C21BF21A200B46185 /* Simpsons+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15DA3A21BF21A200B46185 /* Simpsons+CoreDataClass.swift */; };
+		2B15DA3D21BF21A200B46185 /* Simpsons+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15DA3B21BF21A200B46185 /* Simpsons+CoreDataProperties.swift */; };
+		2B15DA3F21BF239400B46185 /* SimpsonsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B86692721BECA0D00CF9242 /* SimpsonsApp.xcdatamodeld */; };
+		2B15DA4121BF30E700B46185 /* doh.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B15DA4021BF30E700B46185 /* doh.png */; };
+		2B8668F921B8388200CF9242 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8668F821B8388200CF9242 /* AppDelegate.swift */; };
+		2B8668FB21B8388200CF9242 /* SimpsonsCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8668FA21B8388200CF9242 /* SimpsonsCharacterViewController.swift */; };
+		2B8668FE21B8388200CF9242 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8668FC21B8388200CF9242 /* Main.storyboard */; };
+		2B86690021B8388200CF9242 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8668FF21B8388200CF9242 /* Assets.xcassets */; };
+		2B86690321B8388200CF9242 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B86690121B8388200CF9242 /* LaunchScreen.storyboard */; };
+		2B86690B21B9A09A00CF9242 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86690A21B9A09A00CF9242 /* CharacterDetailViewController.swift */; };
+		2B86690E21BADCE200CF9242 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86690D21BADCE200CF9242 /* ServiceManager.swift */; };
+		2B86691A21BC76A600CF9242 /* SimpsonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86691921BC76A600CF9242 /* SimpsonCollectionViewCell.swift */; };
+		2B86691C21BC774D00CF9242 /* SimpsonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B86691B21BC774D00CF9242 /* SimpsonCollectionViewCell.xib */; };
+		2B86691E21BCC09E00CF9242 /* Simpson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86691D21BCC09E00CF9242 /* Simpson.swift */; };
+		2B86692021BCCD1B00CF9242 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86691F21BCCD1B00CF9242 /* PersistenceManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B15DA3A21BF21A200B46185 /* Simpsons+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Simpsons+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2B15DA3B21BF21A200B46185 /* Simpsons+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Simpsons+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2B15DA4021BF30E700B46185 /* doh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = doh.png; path = Resources/doh.png; sourceTree = "<group>"; };
+		2B8668F521B8388200CF9242 /* SimpsonsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpsonsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B8668F821B8388200CF9242 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B8668FA21B8388200CF9242 /* SimpsonsCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsCharacterViewController.swift; sourceTree = "<group>"; };
+		2B8668FD21B8388200CF9242 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B8668FF21B8388200CF9242 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B86690221B8388200CF9242 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B86690421B8388200CF9242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B86690A21B9A09A00CF9242 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		2B86690D21BADCE200CF9242 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		2B86691921BC76A600CF9242 /* SimpsonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpsonCollectionViewCell.swift; sourceTree = "<group>"; };
+		2B86691B21BC774D00CF9242 /* SimpsonCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpsonCollectionViewCell.xib; sourceTree = "<group>"; };
+		2B86691D21BCC09E00CF9242 /* Simpson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simpson.swift; sourceTree = "<group>"; };
+		2B86691F21BCCD1B00CF9242 /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		2B86692821BECA0D00CF9242 /* SimpsonsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpsonsApp.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B8668F221B8388200CF9242 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B8668EC21B8388200CF9242 = {
+			isa = PBXGroup;
+			children = (
+				2B8668F721B8388200CF9242 /* SimpsonsApp */,
+				2B8668F621B8388200CF9242 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B8668F621B8388200CF9242 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B8668F521B8388200CF9242 /* SimpsonsApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B8668F721B8388200CF9242 /* SimpsonsApp */ = {
+			isa = PBXGroup;
+			children = (
+				2B86692121BCEFE600CF9242 /* Resources */,
+				2B86691021BADD5100CF9242 /* Model */,
+				2B86690C21BADCC200CF9242 /* Managers */,
+				2B86691821BC767E00CF9242 /* View */,
+				2B8668FA21B8388200CF9242 /* SimpsonsCharacterViewController.swift */,
+				2B86690A21B9A09A00CF9242 /* CharacterDetailViewController.swift */,
+				2B8668FC21B8388200CF9242 /* Main.storyboard */,
+				2B8668FF21B8388200CF9242 /* Assets.xcassets */,
+				2B8668F821B8388200CF9242 /* AppDelegate.swift */,
+				2B86690121B8388200CF9242 /* LaunchScreen.storyboard */,
+				2B86690421B8388200CF9242 /* Info.plist */,
+				2B86692721BECA0D00CF9242 /* SimpsonsApp.xcdatamodeld */,
+			);
+			path = SimpsonsApp;
+			sourceTree = "<group>";
+		};
+		2B86690C21BADCC200CF9242 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2B86690D21BADCE200CF9242 /* ServiceManager.swift */,
+				2B86691F21BCCD1B00CF9242 /* PersistenceManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		2B86691021BADD5100CF9242 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B86691121BADD5800CF9242 /* Managed Objects */,
+				2B86691D21BCC09E00CF9242 /* Simpson.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2B86691121BADD5800CF9242 /* Managed Objects */ = {
+			isa = PBXGroup;
+			children = (
+				2B15DA3A21BF21A200B46185 /* Simpsons+CoreDataClass.swift */,
+				2B15DA3B21BF21A200B46185 /* Simpsons+CoreDataProperties.swift */,
+			);
+			name = "Managed Objects";
+			sourceTree = "<group>";
+		};
+		2B86691821BC767E00CF9242 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B86691921BC76A600CF9242 /* SimpsonCollectionViewCell.swift */,
+				2B86691B21BC774D00CF9242 /* SimpsonCollectionViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2B86692121BCEFE600CF9242 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B15DA4021BF30E700B46185 /* doh.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B8668F421B8388200CF9242 /* SimpsonsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B86690721B8388200CF9242 /* Build configuration list for PBXNativeTarget "SimpsonsApp" */;
+			buildPhases = (
+				2B8668F121B8388200CF9242 /* Sources */,
+				2B8668F221B8388200CF9242 /* Frameworks */,
+				2B8668F321B8388200CF9242 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpsonsApp;
+			productName = SimpsonsApp;
+			productReference = 2B8668F521B8388200CF9242 /* SimpsonsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B8668ED21B8388200CF9242 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Daniel Monaghan";
+				TargetAttributes = {
+					2B8668F421B8388200CF9242 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2B8668F021B8388200CF9242 /* Build configuration list for PBXProject "SimpsonsApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B8668EC21B8388200CF9242;
+			productRefGroup = 2B8668F621B8388200CF9242 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B8668F421B8388200CF9242 /* SimpsonsApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B8668F321B8388200CF9242 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B86690321B8388200CF9242 /* LaunchScreen.storyboard in Resources */,
+				2B86690021B8388200CF9242 /* Assets.xcassets in Resources */,
+				2B15DA4121BF30E700B46185 /* doh.png in Resources */,
+				2B86691C21BC774D00CF9242 /* SimpsonCollectionViewCell.xib in Resources */,
+				2B8668FE21B8388200CF9242 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B8668F121B8388200CF9242 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8668FB21B8388200CF9242 /* SimpsonsCharacterViewController.swift in Sources */,
+				2B86691A21BC76A600CF9242 /* SimpsonCollectionViewCell.swift in Sources */,
+				2B86690B21B9A09A00CF9242 /* CharacterDetailViewController.swift in Sources */,
+				2B15DA3D21BF21A200B46185 /* Simpsons+CoreDataProperties.swift in Sources */,
+				2B8668F921B8388200CF9242 /* AppDelegate.swift in Sources */,
+				2B15DA3F21BF239400B46185 /* SimpsonsApp.xcdatamodeld in Sources */,
+				2B15DA3C21BF21A200B46185 /* Simpsons+CoreDataClass.swift in Sources */,
+				2B86691E21BCC09E00CF9242 /* Simpson.swift in Sources */,
+				2B86692021BCCD1B00CF9242 /* PersistenceManager.swift in Sources */,
+				2B86690E21BADCE200CF9242 /* ServiceManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2B8668FC21B8388200CF9242 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B8668FD21B8388200CF9242 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B86690121B8388200CF9242 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B86690221B8388200CF9242 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B86690521B8388200CF9242 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B86690621B8388200CF9242 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B86690821B8388200CF9242 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SimpsonsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DMonaghan.SimpsonsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2B86690921B8388200CF9242 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SimpsonsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DMonaghan.SimpsonsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B8668F021B8388200CF9242 /* Build configuration list for PBXProject "SimpsonsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B86690521B8388200CF9242 /* Debug */,
+				2B86690621B8388200CF9242 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B86690721B8388200CF9242 /* Build configuration list for PBXNativeTarget "SimpsonsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B86690821B8388200CF9242 /* Debug */,
+				2B86690921B8388200CF9242 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2B86692721BECA0D00CF9242 /* SimpsonsApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2B86692821BECA0D00CF9242 /* SimpsonsApp.xcdatamodel */,
+			);
+			currentVersion = 2B86692821BECA0D00CF9242 /* SimpsonsApp.xcdatamodel */;
+			path = SimpsonsApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2B8668ED21B8388200CF9242 /* Project object */;
+}
