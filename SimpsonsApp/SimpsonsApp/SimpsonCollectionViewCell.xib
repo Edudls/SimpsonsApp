@@ -18,11 +18,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="283" height="271"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qnj-dD-jWS">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qnj-dD-jWS">
                         <rect key="frame" x="10" y="10" width="263" height="251"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdj-01-l98">
-                        <rect key="frame" x="0.0" y="0.0" width="283" height="271"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdj-01-l98">
+                        <rect key="frame" x="10" y="10" width="263" height="251"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -32,12 +32,12 @@
             <constraints>
                 <constraint firstItem="qnj-dD-jWS" firstAttribute="leading" secondItem="093-tt-sFa" secondAttribute="leading" constant="10" id="Fhf-Mr-VaZ"/>
                 <constraint firstAttribute="trailing" secondItem="qnj-dD-jWS" secondAttribute="trailing" constant="10" id="JYK-4K-20h"/>
-                <constraint firstAttribute="bottom" secondItem="Mdj-01-l98" secondAttribute="bottom" id="OIr-Fj-8FB"/>
+                <constraint firstAttribute="bottom" secondItem="Mdj-01-l98" secondAttribute="bottom" constant="10" id="OIr-Fj-8FB"/>
                 <constraint firstAttribute="bottom" secondItem="qnj-dD-jWS" secondAttribute="bottom" constant="10" id="dgz-wA-GOK"/>
-                <constraint firstItem="Mdj-01-l98" firstAttribute="leading" secondItem="093-tt-sFa" secondAttribute="leading" id="fcb-PP-1zg"/>
+                <constraint firstItem="Mdj-01-l98" firstAttribute="leading" secondItem="093-tt-sFa" secondAttribute="leading" constant="10" id="fcb-PP-1zg"/>
                 <constraint firstItem="qnj-dD-jWS" firstAttribute="top" secondItem="093-tt-sFa" secondAttribute="top" constant="10" id="fyH-It-Vpa"/>
-                <constraint firstItem="Mdj-01-l98" firstAttribute="top" secondItem="093-tt-sFa" secondAttribute="top" id="h4V-Uu-Wf6"/>
-                <constraint firstAttribute="trailing" secondItem="Mdj-01-l98" secondAttribute="trailing" id="xRu-wS-aHo"/>
+                <constraint firstItem="Mdj-01-l98" firstAttribute="top" secondItem="093-tt-sFa" secondAttribute="top" constant="10" id="h4V-Uu-Wf6"/>
+                <constraint firstAttribute="trailing" secondItem="Mdj-01-l98" secondAttribute="trailing" constant="10" id="xRu-wS-aHo"/>
             </constraints>
             <size key="customSize" width="283" height="271"/>
             <connections>
