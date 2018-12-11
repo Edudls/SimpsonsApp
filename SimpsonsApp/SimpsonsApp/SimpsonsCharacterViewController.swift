@@ -13,19 +13,16 @@ class SimpsonsCharacterViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let cellIdentifier = "SimpsonCollectionViewCell"
     var simpsons = [Simpsons]()
     //let manager = PersistenceManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setupCollectionView()
+        
         self.downloadSimpsons()
-        /*manager.downloadSimpsons(completion: { (characters) in
-            send back to collectionView to show
-            DispatchQueue.main.async {
-                self.simpsons = characters
-            }
-        })*/
         
     }
     
@@ -42,6 +39,7 @@ class SimpsonsCharacterViewController: UIViewController {
                 let text = character["Text"] as! String
                 //split text up into name and desc, respectively
                 let separated = text.components(separatedBy: " - ")
+                //print(separated[1])
                 //let newSimpson = Simpson(separated[0], separated[1], imageURL)
                 //self.simpsons.append(newSimpson)
                 self.downloadImage(imageURL, completion: { (imageData) in
@@ -49,8 +47,9 @@ class SimpsonsCharacterViewController: UIViewController {
                     DispatchQueue.main.async {
                         
                         let newSimpson = PersistenceManager.addSimpson(separated[0], separated[1], imageData)
-                        print(newSimpson)
+                        //print(newSimpson.desc!)
                         self.simpsons.append(newSimpson)
+                        self.collectionView.reloadData()
                     }
                 })
             }
@@ -75,6 +74,77 @@ class SimpsonsCharacterViewController: UIViewController {
         
     }
     
+    func setupCollectionView() {
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+        
+        let cellNib = UINib(nibName: "SimpsonCollectionViewCell", bundle: nil)
+        self.collectionView.register(cellNib, forCellWithReuseIdentifier: cellIdentifier)
+        //self.collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
+    }
+    
+}
+
+extension SimpsonsCharacterViewController: UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.simpsons.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! SimpsonCollectionViewCell
+        
+        let data = Data(referencing: self.simpsons[indexPath.row].image!)
+        cell.imageView.image = UIImage(data: data)
+        cell.nameLabel.text = self.simpsons[indexPath.row].name
+        
+        return cell
+    }
+    
+}
+
+/*extension SimpsonsCharacterViewController: UICollectionViewDelegate {
+    
+    //adds touch functionality to individual cells, need to configure for linking to character profile page
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("did select cell: \(indexPath)")
+        
+        let selectedIndex = indexPath.row
+        let selectedSimpson = self.simpsons[selectedIndex]
+        //PersistenceManager.addPokemonToTrainer(selectedMon)
+        
+        //self.pokemon.remove(at: selectedPokemonIndex)
+        self.collectionView.reloadData()
+    }
+}*/
+
+extension SimpsonsCharacterViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let screenWidth = self.collectionView.frame.size.width
+        // let screenHeight = self.collectionView.frame.size.height
+        
+        return CGSize(width: screenWidth/3.0,
+                      height: screenWidth/3.0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout
+        collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
+    }
 }
 
 
@@ -160,8 +230,7 @@ extension PokedexViewController: UICollectionViewDataSource {
         
         return cell
     }
-    
-    
+ 
 }
 
 extension PokedexViewController: UICollectionViewDelegate {

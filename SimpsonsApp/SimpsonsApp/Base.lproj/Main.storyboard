@@ -107,7 +107,6 @@
         <!--Simpsons Character View Controller-->
         <scene sceneID="OXf-nu-zVF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dcn-Zz-721" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="78c-tf-i0g" userLabel="Simpsons Character View Controller" customClass="SimpsonsCharacterViewController" customModule="SimpsonsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Le2-0M-jb0"/>
@@ -134,9 +133,9 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cellBreak" id="vVd-lx-hP1">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SimpsonCollectionViewCell" id="rln-DK-dWZ" customClass="SimpsonCollectionViewCell" customModule="SimpsonsApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
@@ -161,6 +160,7 @@
                         <outlet property="collectionView" destination="RR4-30-mxj" id="5b4-Qy-CyG"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dcn-Zz-721" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1768.8" y="-500.59970014992507"/>
         </scene>

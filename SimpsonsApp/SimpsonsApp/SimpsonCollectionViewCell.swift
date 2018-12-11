@@ -7,7 +7,7 @@
 //
 
 import UIKit
-/*
+
 class SimpsonCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -18,4 +18,4 @@ class SimpsonCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-}*/
+}
