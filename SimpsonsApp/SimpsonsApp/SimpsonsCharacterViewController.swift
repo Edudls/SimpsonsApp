@@ -23,7 +23,11 @@ class SimpsonsCharacterViewController: UIViewController {
         
         self.setupCollectionView()
         
-        self.downloadSimpsons()
+        simpsons = PersistenceManager.loadSavedSimpsons()
+        
+        if simpsons == [] {
+            self.downloadSimpsons()
+        }
         
     }
     
@@ -32,9 +36,24 @@ class SimpsonsCharacterViewController: UIViewController {
         self.collectionView.reloadData()
     }
     
+    @IBAction func resetButton(_ sender: UIButton) {
+        
+        PersistenceManager.deleteAllSimpsons()
+        
+        //reload the view controller, which includes redownloading all of the data
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SimpsonsCharacterViewController")
+        var viewControllers = self.navigationController!.viewControllers
+        viewControllers.removeLast()
+        viewControllers.append(vc)
+        self.navigationController?.setViewControllers(viewControllers, animated: false)
+    }
+    
     
     func downloadSimpsons() {
+        
         let url = URL(string: "https://api.duckduckgo.com/?q=simpsons+characters&format=json")!
+        
         URLSession.shared.dataTask(with: url) { (data, _, _) in
             let json = try! JSONSerialization.jsonObject(with: data!, options: .mutableLeaves) as! [String:Any]
             
@@ -127,7 +146,7 @@ extension SimpsonsCharacterViewController: UICollectionViewDelegate {
     
     //adds touch functionality to individual cells, need to configure for linking to character profile page
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("did select cell: \(indexPath)")
+        //print("did select cell: \(indexPath)")
         
         let selectedIndex = indexPath.row
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "CharacterDetailViewController") as! CharacterDetailViewController

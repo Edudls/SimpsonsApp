@@ -57,16 +57,15 @@ class PersistenceManager {
         PersistenceManager.sharedInstance.saveContext()
     }*/
     
-    static func loadSavedSimpson() -> [Simpsons] {
+    static func loadSavedSimpsons() -> [Simpsons] {
  
-         let fetchRequest = NSFetchRequest<Simpsons>(entityName: "Simpson")
+         let fetchRequest = NSFetchRequest<Simpsons>(entityName: "Simpsons")
  
          do {
-         let savedSimpsons = try PersistenceManager.sharedInstance.mainContext.fetch(fetchRequest)
-         return savedSimpsons
-         }
-         catch {
-         return []
+            let savedSimpsons = try PersistenceManager.sharedInstance.mainContext.fetch(fetchRequest)
+            return savedSimpsons
+         } catch {
+            return []
          }
  
     }
@@ -98,6 +97,7 @@ class PersistenceManager {
         context.delete(simpson)
         PersistenceManager.sharedInstance.saveContext()
     }
+    
     /*
     static func queryForPokemon() {
         let context = PersistenceManager.sharedInstance.mainContext
@@ -108,23 +108,21 @@ class PersistenceManager {
             print("savedPokemon: \(savedPokemon.count)")
         } catch { }
         
-    }
+    }*/
     
-    static func deleteAllWildPokemon() {
+    static func deleteAllSimpsons() {
         let context = PersistenceManager.sharedInstance.mainContext
         
-        let fetchRequest = NSFetchRequest<Pokemon>(entityName: "Pokemon")
-        let predicate = NSPredicate(format: "trainer = nil")
-        fetchRequest.predicate = predicate
+        let fetchRequest = NSFetchRequest<Simpsons>(entityName: "Simpsons")
         do {
-            let savedPokemon = try context.fetch(fetchRequest)
-            savedPokemon.forEach { mon in
-                context.delete(mon)
+            let savedSimpsons = try context.fetch(fetchRequest)
+            savedSimpsons.forEach { character in
+                context.delete(character)
             }
         } catch { }
         
         PersistenceManager.sharedInstance.saveContext()
-    }*/
+    }
     
     
     // MARK: - Core Data stack

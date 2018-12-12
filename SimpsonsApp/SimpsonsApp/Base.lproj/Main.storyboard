@@ -106,7 +106,7 @@
         <!--Simpsons Character View Controller-->
         <scene sceneID="OXf-nu-zVF">
             <objects>
-                <viewController id="78c-tf-i0g" userLabel="Simpsons Character View Controller" customClass="SimpsonsCharacterViewController" customModule="SimpsonsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SimpsonsCharacterViewController" id="78c-tf-i0g" userLabel="Simpsons Character View Controller" customClass="SimpsonsCharacterViewController" customModule="SimpsonsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Le2-0M-jb0"/>
                         <viewControllerLayoutGuide type="bottom" id="JVv-Mi-PNu"/>
@@ -160,7 +160,21 @@
                             <constraint firstAttribute="trailingMargin" secondItem="u6M-iT-Sol" secondAttribute="trailing" id="xdb-UD-oET"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Simpsons Character Select" id="DNQ-p0-4H6"/>
+                    <navigationItem key="navigationItem" title="Simpsons Character Select" id="DNQ-p0-4H6">
+                        <barButtonItem key="rightBarButtonItem" title="Reset" style="plain" id="rVO-CU-jQj">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YJg-Og-vy0">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.092125669189999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButton:" destination="78c-tf-i0g" eventType="touchUpInside" id="u3u-vD-qdd"/>
+                                </connections>
+                            </button>
+                            <color key="tintColor" red="1" green="0.0" blue="0.092125669189999995" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="RR4-30-mxj" id="5b4-Qy-CyG"/>
                     </connections>
