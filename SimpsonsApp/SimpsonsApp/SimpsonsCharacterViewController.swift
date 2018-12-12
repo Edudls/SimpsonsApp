@@ -15,6 +15,7 @@ class SimpsonsCharacterViewController: UIViewController {
     
     let cellIdentifier = "SimpsonCollectionViewCell"
     var simpsons = [Simpsons]()
+    var selectionIndex = 0
     //let manager = PersistenceManager()
     
     override func viewDidLoad() {
@@ -25,6 +26,12 @@ class SimpsonsCharacterViewController: UIViewController {
         self.downloadSimpsons()
         
     }
+    
+    @IBAction func segmentedAction(_ sender: UISegmentedControl) {
+        selectionIndex = sender.selectedSegmentIndex
+        self.collectionView.reloadData()
+    }
+    
     
     func downloadSimpsons() {
         let url = URL(string: "https://api.duckduckgo.com/?q=simpsons+characters&format=json")!
@@ -101,6 +108,15 @@ extension SimpsonsCharacterViewController: UICollectionViewDataSource {
         let data = Data(referencing: self.simpsons[indexPath.row].image!)
         cell.imageView.image = UIImage(data: data)
         cell.nameLabel.text = self.simpsons[indexPath.row].name
+        
+        //changes table display depending on segmented control
+        if selectionIndex == 1 {
+            cell.imageView.isHidden = false
+            cell.nameLabel.isHidden = true
+        } else {
+            cell.imageView.isHidden = true
+            cell.nameLabel.isHidden = false
+        }
         
         return cell
     }

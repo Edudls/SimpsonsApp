@@ -12,6 +12,7 @@ class SimpsonCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    var selection: Int?
 
     override func awakeFromNib() {
         super.awakeFromNib()

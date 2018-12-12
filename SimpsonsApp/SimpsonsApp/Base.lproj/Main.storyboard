@@ -115,12 +115,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="u6M-iT-Sol">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="u6M-iT-Sol">
                                 <rect key="frame" x="16" y="69" width="343" height="29"/>
                                 <segments>
                                     <segment title="Character Names"/>
                                     <segment title="Character Pictures"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedAction:" destination="78c-tf-i0g" eventType="valueChanged" id="5bL-cC-WZc"/>
+                                </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RR4-30-mxj">
                                 <rect key="frame" x="16" y="102" width="343" height="565"/>
