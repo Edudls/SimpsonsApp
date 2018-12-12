@@ -13,7 +13,7 @@
         <!--Character Detail View Controller-->
         <scene sceneID="fXa-yA-BqX">
             <objects>
-                <viewController id="QMS-9f-uj4" userLabel="Character Detail View Controller" customClass="CharacterDetailViewController" customModule="SimpsonsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CharacterDetailViewController" id="QMS-9f-uj4" userLabel="Character Detail View Controller" customClass="CharacterDetailViewController" customModule="SimpsonsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="awf-TC-TCK"/>
                         <viewControllerLayoutGuide type="bottom" id="7d5-gn-65y"/>
@@ -22,14 +22,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RDj-wp-TcW">
-                                <rect key="frame" x="16" y="25" width="343" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RDj-wp-TcW">
+                                <rect key="frame" x="16" y="30" width="343" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="42P-Zd-UA5"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQj-rg-hpz">
-                                <rect key="frame" x="16" y="235" width="343" height="30"/>
+                                <rect key="frame" x="16" y="240" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="PtS-8u-fM1"/>
                                 </constraints>
@@ -38,15 +38,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Character description - a long description of the given character with a scroll bar if it exceeds the size of this text view." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zy7-Dh-N5y">
-                                <rect key="frame" x="16" y="265" width="343" height="100"/>
+                                <rect key="frame" x="16" y="270" width="343" height="140"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="t3L-Jg-ywJ"/>
+                                    <constraint firstAttribute="height" constant="140" id="t3L-Jg-ywJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MY2-Ty-Zup">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MY2-Ty-Zup">
                                 <rect key="frame" x="16" y="617" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Omt-bZ-YJS"/>
@@ -56,7 +56,7 @@
                                     <color key="titleColor" red="1" green="0.0" blue="0.092125669194269122" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY0-3B-nlN">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY0-3B-nlN">
                                 <rect key="frame" x="16" y="567" width="343" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Gr1-SO-UMu"/>
@@ -65,7 +65,7 @@
                                 <state key="normal" title="Add To Favorites"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Pr-2l-wqE">
-                                <rect key="frame" x="309" y="25" width="50" height="50"/>
+                                <rect key="frame" x="309" y="30" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="HzH-i0-RiY"/>
                                     <constraint firstAttribute="height" constant="50" id="yUD-nu-fkr"/>
@@ -80,7 +80,7 @@
                             <constraint firstItem="XY0-3B-nlN" firstAttribute="leading" secondItem="lPW-mg-xGM" secondAttribute="leadingMargin" id="HEK-km-CrQ"/>
                             <constraint firstItem="Zy7-Dh-N5y" firstAttribute="leading" secondItem="lPW-mg-xGM" secondAttribute="leadingMargin" id="IRw-4x-oDO"/>
                             <constraint firstItem="MY2-Ty-Zup" firstAttribute="top" secondItem="XY0-3B-nlN" secondAttribute="bottom" constant="10" id="KuI-BA-3gh"/>
-                            <constraint firstItem="RDj-wp-TcW" firstAttribute="top" secondItem="awf-TC-TCK" secondAttribute="bottom" constant="5" id="Lhe-6W-aAW"/>
+                            <constraint firstItem="RDj-wp-TcW" firstAttribute="top" secondItem="awf-TC-TCK" secondAttribute="bottom" constant="10" id="Lhe-6W-aAW"/>
                             <constraint firstItem="RDj-wp-TcW" firstAttribute="leading" secondItem="lPW-mg-xGM" secondAttribute="leadingMargin" id="NT4-4G-mkp"/>
                             <constraint firstItem="MY2-Ty-Zup" firstAttribute="leading" secondItem="lPW-mg-xGM" secondAttribute="leadingMargin" id="Nb8-mY-IGf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Pr-2l-wqE" secondAttribute="trailing" id="azY-km-6uu"/>
@@ -88,21 +88,20 @@
                             <constraint firstAttribute="trailingMargin" secondItem="XY0-3B-nlN" secondAttribute="trailing" id="cDu-Jw-WeG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zy7-Dh-N5y" secondAttribute="trailing" id="fCU-QG-N7w"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MY2-Ty-Zup" secondAttribute="trailing" id="gLW-cR-Ql9"/>
-                            <constraint firstItem="9Pr-2l-wqE" firstAttribute="top" secondItem="awf-TC-TCK" secondAttribute="bottom" constant="5" id="oBL-dV-j7r"/>
+                            <constraint firstItem="9Pr-2l-wqE" firstAttribute="top" secondItem="awf-TC-TCK" secondAttribute="bottom" constant="10" id="oBL-dV-j7r"/>
                             <constraint firstItem="NQj-rg-hpz" firstAttribute="top" secondItem="RDj-wp-TcW" secondAttribute="bottom" constant="10" id="uGQ-Ub-sus"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NQj-rg-hpz" secondAttribute="trailing" id="ydL-ts-tGx"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="descLabel" destination="Zy7-Dh-N5y" id="dmm-GW-8cg"/>
-                        <outlet property="favoriteIcon" destination="9Pr-2l-wqE" id="QHQ-cZ-cPf"/>
-                        <outlet property="imageView" destination="RDj-wp-TcW" id="mvY-OX-ZTx"/>
-                        <outlet property="nameLabel" destination="NQj-rg-hpz" id="eQs-fB-KUH"/>
+                        <outlet property="descTextView" destination="Zy7-Dh-N5y" id="E8c-64-HER"/>
+                        <outlet property="imageView" destination="RDj-wp-TcW" id="Isk-pf-KhW"/>
+                        <outlet property="nameLabel" destination="NQj-rg-hpz" id="lfX-Xn-BpO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Kl-9o-Ixf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2566" y="-501"/>
+            <point key="canvasLocation" x="2655" y="-501"/>
         </scene>
         <!--Simpsons Character View Controller-->
         <scene sceneID="OXf-nu-zVF">
@@ -140,6 +139,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="QMS-9f-uj4" kind="presentation" identifier="characterSegue" id="0Ab-P0-rKX"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

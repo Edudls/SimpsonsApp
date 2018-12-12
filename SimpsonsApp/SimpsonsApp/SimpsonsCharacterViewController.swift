@@ -107,20 +107,22 @@ extension SimpsonsCharacterViewController: UICollectionViewDataSource {
     
 }
 
-/*extension SimpsonsCharacterViewController: UICollectionViewDelegate {
+extension SimpsonsCharacterViewController: UICollectionViewDelegate {
     
     //adds touch functionality to individual cells, need to configure for linking to character profile page
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("did select cell: \(indexPath)")
         
         let selectedIndex = indexPath.row
-        let selectedSimpson = self.simpsons[selectedIndex]
-        //PersistenceManager.addPokemonToTrainer(selectedMon)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CharacterDetailViewController") as! CharacterDetailViewController
+        vc.simpson = self.simpsons[selectedIndex]
+        self.navigationController!.pushViewController(vc, animated: true)
+        //self.present(vc, animated: true, completion: nil)
         
-        //self.pokemon.remove(at: selectedPokemonIndex)
-        self.collectionView.reloadData()
+        //self.simpsons.remove(at: selectedIndex)
+        //self.collectionView.reloadData()
     }
-}*/
+}
 
 extension SimpsonsCharacterViewController: UICollectionViewDelegateFlowLayout {
     

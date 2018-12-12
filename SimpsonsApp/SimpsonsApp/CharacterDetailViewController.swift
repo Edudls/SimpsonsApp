@@ -7,17 +7,25 @@
 //
 
 import UIKit
-/*
+
 class CharacterDetailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var favoriteIcon: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var descLabel: UITextView!
+    @IBOutlet weak var descTextView: UITextView!
+    
+    var simpson: Simpsons!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.title = "Character Details"
+        
+        self.nameLabel.text = simpson.name
+        self.descTextView.text = simpson.desc
+        self.imageView.image = UIImage(data: simpson.image as! Data)
+        
     }
     
     
@@ -63,4 +71,4 @@ class PokemonDetailsViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.dismiss(animated: true, completion: nil)
     }
-}*/*/
+}*/
