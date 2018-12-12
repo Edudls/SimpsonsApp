@@ -28,8 +28,24 @@ class CharacterDetailViewController: UIViewController {
         
     }
     
+    @IBAction func pinchHandler(sender: UIPinchGestureRecognizer) {
+        // adds the ability to resize image using pinch gesture
+        if let view = sender.view {
+            view.transform = view.transform.scaledBy(x: sender.scale, y: sender.scale)
+            sender.scale = 1
+        }
+    }
     
-    
+    @IBAction func panHandler(sender: UIPanGestureRecognizer) {
+        //adds the ability to drag the image using pan gesture
+        let translation = sender.translation(in: self.view)
+        if let view = sender.view {
+            let newX = view.center.x + translation.x
+            let newY = view.center.y + translation.y
+            view.center = CGPoint(x: newX, y: newY)
+        }
+        sender.setTranslation(CGPoint.zero, in: self.view)
+    }
     
 }
 

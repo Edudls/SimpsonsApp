@@ -22,11 +22,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RDj-wp-TcW">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RDj-wp-TcW">
                                 <rect key="frame" x="16" y="30" width="343" height="200"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="42P-Zd-UA5"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="NsB-p2-L2O" appends="YES" id="ahK-ja-60f"/>
+                                    <outletCollection property="gestureRecognizers" destination="fNO-Pa-Xvb" appends="YES" id="YAZ-9G-iCL"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQj-rg-hpz">
                                 <rect key="frame" x="16" y="240" width="343" height="30"/>
@@ -100,6 +105,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Kl-9o-Ixf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="NsB-p2-L2O">
+                    <connections>
+                        <action selector="pinchHandlerWithSender:" destination="QMS-9f-uj4" id="uIP-Al-UGY"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="fNO-Pa-Xvb">
+                    <connections>
+                        <action selector="panHandlerWithSender:" destination="QMS-9f-uj4" id="XaQ-zg-eF7"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2655" y="-501"/>
         </scene>
