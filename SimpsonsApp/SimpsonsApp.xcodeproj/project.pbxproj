@@ -20,7 +20,6 @@
 		2B86690E21BADCE200CF9242 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86690D21BADCE200CF9242 /* ServiceManager.swift */; };
 		2B86691A21BC76A600CF9242 /* SimpsonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86691921BC76A600CF9242 /* SimpsonCollectionViewCell.swift */; };
 		2B86691C21BC774D00CF9242 /* SimpsonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B86691B21BC774D00CF9242 /* SimpsonCollectionViewCell.xib */; };
-		2B86691E21BCC09E00CF9242 /* Simpson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86691D21BCC09E00CF9242 /* Simpson.swift */; };
 		2B86692021BCCD1B00CF9242 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B86691F21BCCD1B00CF9242 /* PersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +38,6 @@
 		2B86690D21BADCE200CF9242 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		2B86691921BC76A600CF9242 /* SimpsonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpsonCollectionViewCell.swift; sourceTree = "<group>"; };
 		2B86691B21BC774D00CF9242 /* SimpsonCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpsonCollectionViewCell.xib; sourceTree = "<group>"; };
-		2B86691D21BCC09E00CF9242 /* Simpson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simpson.swift; sourceTree = "<group>"; };
 		2B86691F21BCCD1B00CF9242 /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		2B86692821BECA0D00CF9242 /* SimpsonsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpsonsApp.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				2B86691121BADD5800CF9242 /* Managed Objects */,
-				2B86691D21BCC09E00CF9242 /* Simpson.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -215,7 +212,6 @@
 				2B8668F921B8388200CF9242 /* AppDelegate.swift in Sources */,
 				2B15DA3F21BF239400B46185 /* SimpsonsApp.xcdatamodeld in Sources */,
 				2B15DA3C21BF21A200B46185 /* Simpsons+CoreDataClass.swift in Sources */,
-				2B86691E21BCC09E00CF9242 /* Simpson.swift in Sources */,
 				2B86692021BCCD1B00CF9242 /* PersistenceManager.swift in Sources */,
 				2B86690E21BADCE200CF9242 /* ServiceManager.swift in Sources */,
 			);

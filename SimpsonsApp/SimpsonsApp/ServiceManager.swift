@@ -6,7 +6,12 @@
 //  Copyright © 2018 Daniel Monaghan. All rights reserved.
 //
 
-import Foundation
+//=====================================================================================
+// MARK: NONE OF THIS IS IN USE
+// THIS ENTIRE FILE IS JUST HERE FOR REFERENCE ON HOW TO IMPLEMENT COREDATA METHODS
+//=====================================================================================
+
+//import Foundation
 /*
 class ServiceManager {
     

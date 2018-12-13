@@ -13,6 +13,7 @@ class CharacterDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descTextView: UITextView!
+    @IBOutlet weak var deleteButton: UIButton!
     
     var simpson: Simpsons!
     
@@ -25,7 +26,21 @@ class CharacterDetailViewController: UIViewController {
         self.nameLabel.text = simpson.name
         self.descTextView.text = simpson.desc
         self.imageView.image = UIImage(data: simpson.image as! Data)
+        self.deleteButton.setTitle("Delete " + simpson.name!, for: .normal)
         
+    }
+    
+    @IBAction func deleteButtonAction(_ sender: UIButton) {
+        print("Deleted " + simpson.name!)
+        PersistenceManager.deleteSimpson(self.simpson)
+        //reload the view controller, which includes redownloading all of the data
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SimpsonsCharacterViewController")
+        var viewControllers = self.navigationController!.viewControllers
+        viewControllers.removeLast()
+        viewControllers.removeLast()
+        viewControllers.append(vc)
+        self.navigationController?.setViewControllers(viewControllers, animated: true)
     }
     
     @IBAction func pinchHandler(sender: UIPinchGestureRecognizer) {
